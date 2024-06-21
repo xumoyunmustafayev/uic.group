@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper {
+  background-image: url(../public/main_back.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* padding-top: 450px; */
+}
+
+.wrap {
+  background-image: url(../public/mountain.webp);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size:contain;
+}
+.relative:hover .language-selector {
+  display: none;
+}
+
+.relative:hover .language-options {
+  display: flex;
+}
+
+.relative:hover ~ .menu-items {
+  display: none;
+}
+
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
+}
+
+
+.bg-blur{
+  backdrop-filter: blur(10px);
+}
+
