@@ -23,8 +23,6 @@ const App = () => {
         <Services/>
         <Partners/>
         <Footer/>
-
-
       </div>
     </>
   );

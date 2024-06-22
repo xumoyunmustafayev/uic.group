@@ -1,33 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
-import Logo from "../../public/Logoooo.png";
+import  { useState } from "react";
+import Logo from "../public/Logoooo.png";
 import { FaGlobeAmericas } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Nav = () => {
   const [showLanguages, setShowLanguages] = useState(false);
-  const navRef = useRef();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 700) {
-        navRef.current.classList.add("backdrop-blur-lg");
-      } else {
-        navRef.current.classList.remove("backdrop-blur-lg");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <div className="pb-20 mx-auto">
-      <div
-        className="flex items-center justify-between z-10 fixed w-[1200px]"
-        ref={navRef}
-      >
+      <div className="flex items-center justify-between z-10 fixed w-[1250px] backdrop-blur-3xl">
         <Link to="/" className=" cursor-pointer">
           <img src={Logo} alt="" className="w-[130px] h-[99px] object-cover" />
         </Link>
@@ -85,4 +66,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Nav;
